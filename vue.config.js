@@ -51,7 +51,10 @@ module.exports = {
   configureWebpack: {
     output: {
       filename: '[name].js',
-      chunkFilename: '[name].js',
+    //  chunkFilename: '[name].js',
+    },
+    optimization: {
+      minimize: false,
     },
     devtool: isDevMode ? 'inline-source-map' : false,
     experiments: {
